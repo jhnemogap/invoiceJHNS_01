@@ -10,8 +10,8 @@
 }
 
 :root {
-  --borderSingle1: 1px solid black;
-  --borderBottom1: 0.1cm solid black;
+  --borderSingle1: 1px solid #000;
+  --borderBottom1: 0.1cm solid #000;
 }
 
 body {
@@ -56,8 +56,8 @@ body {
 
 @media print {
   :root {
-    --borderSingle1: 0;
-    --borderBottom1: 0;
+    --borderSingle1: 1px solid #fff;
+    --borderBottom1: 0.1cm solid #fff;
   }
 
   .noPrint {
