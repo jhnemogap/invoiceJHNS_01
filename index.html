@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header-item">
+          <h2 class="noPrint">
+            EMANUEL IMPRESORES
+          </h2>
+        </div>
+
+        <div class="header-item">
+          <h3 class="noPrint">
+            FACTURA DE VENTA No.
+          </h3>
+        </div>
+
+        <div class="header-item">
+          <h5 class="noPrint">
+            Señores:
+          </h5>
+        </div>
+
+        <div class="header-item"></div>
+      </header>
+
+      <main class="main">
+        <section class="products-section">
+          <div class="products-container" id="products-container">
+            <div class="products-attributes noPrint">
+              <h5>CANTIDAD</h5>
+              <h5>DESCRIPCIÓN</h5>
+              <h5>VR. UNIT.</h5>
+              <h5>VR. TOTAL</h5>
+            </div>
+
+            <div class="products" id="products"></div>
+            <!-- Here, Add product by JS -->
+          </div>
+        </section>
+
+        <section class="price-container">
+          Precio
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="accept-container">
+          SON:
+        </div>
+
+        <div class="att-container">
+          Atentamente
+        </div>
+      </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
