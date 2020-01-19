@@ -1,3 +1,9 @@
+:root {
+  --borderSingle1: 1px solid #000;
+  --borderBottom1: 0.1cm solid #000;
+  --borderInput: 1px solid #0000ff;
+}
+
 *,
 *::after,
 *::before {
@@ -9,17 +15,18 @@
   -webkit-margin-start: 0;
 }
 
-:root {
-  --borderSingle1: 1px solid #000;
-  --borderBottom1: 0.1cm solid #000;
-}
-
 body {
   font-family: sans-serif;
   font-size: 12px;
   display: flex;
   justify-content: center;
   background-color: #aaa;
+}
+
+input,
+textarea {
+  border: var(--borderInput);
+  outline: none;
 }
 
 #app {
@@ -38,13 +45,51 @@ body {
 .header-item {
   border: var(--borderSingle1);
   border-bottom: var(--borderBottom1);
+  display: grid;
+  grid-gap: 0.2cm;
 }
 
+.header-item:nth-child(2) {
+  padding: 0.3cm 0.2cm 0.2cm;
+  grid-template-columns: 3cm 1fr;
+}
+
+.header-item__bill-numb {
+  color: #f00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-item:nth-child(3) {
+  padding: 0.2cm;
+  grid-template-columns: 1.2cm 1fr;
+}
+
+.header-item__sr-text {
+  resize: none;
+  font-weight: bold;
+}
+
+.header-item:nth-child(4) {
+  padding: 0.1cm;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-gap: 0;
+}
+
+.header-item__purchase-numb,
+.header-item__payment-type {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 3cm 1fr;
+}
+
+/* MEDIA QUERIES - Screen < 816px and print */
 @media only screen and (max-width: 815.9px) {
   #app {
     width: 94%;
     height: inherit;
-    padding: 1rem;
+    padding: 4%;
   }
 
   .header {
@@ -58,6 +103,11 @@ body {
   :root {
     --borderSingle1: 1px solid #fff;
     --borderBottom1: 0.1cm solid #fff;
+  }
+
+  input,
+  textarea {
+    border: 0;
   }
 
   .noPrint {
