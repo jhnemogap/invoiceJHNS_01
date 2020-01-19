@@ -24,7 +24,7 @@
           <input
             class="header-item__bill-numb"
             type="number"
-            min="0001"
+            min="1"
             max="9999"
             size="4"
             maxlength="4"
@@ -83,6 +83,7 @@
             <h5>DESCRIPCIÓN</h5>
             <h5>VR. UNIT.</h5>
             <h5>VR. TOTAL</h5>
+            <h5>Del</h5>
           </div>
 
           <div id="products" class="products">
@@ -91,11 +92,28 @@
         </section>
 
         <section class="price-container">
-          SON: y Precio
+          <div class="price-inText-container">
+            <h5 class="noPrint">SON:</h5>
+            <textarea
+              class="price-inText"
+              rows="2"
+              spellcheck="true"
+            ></textarea>
+          </div>
+
+          <div class="price-inNumber-container">
+            <h5 class="noPrint">SUB TOTAL</h5>
+            <p id="price-subTotal" class="price-subTotal">
+              <span>$</span>
+            </p>
+
+            <h5 class="noPrint">TOTAL ></h5>
+            <p id="price-total" class="price-total"><span>$</span></p>
+          </div>
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="footer noPrint">
         <div class="accept-container">
           Firma de aceptación
         </div>
