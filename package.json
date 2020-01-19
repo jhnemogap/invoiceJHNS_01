@@ -1,8 +1,16 @@
 {
-  "name": "vanilla",
-  "version": "1.0.0",
+  "name": "invoceTemplate-jhns-01",
+  "version": "0.1.0",
   "description": "",
   "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhnemogap/invoiceTemplate-jhns-01"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jorge Humberto Nemogá Pinzón"
+  },
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
