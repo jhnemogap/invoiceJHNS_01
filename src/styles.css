@@ -2,17 +2,18 @@
   --borderSingle1: 1px solid #000;
   --borderBottom1: 0.1cm solid #000;
   --borderInput: 1px solid #0000ff;
+  --fontSizeProduct: 16px;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
   -webkit-padding-start: 0;
   -webkit-margin-start: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -36,6 +37,7 @@ textarea {
   padding: 1.5cm 1cm 1.1cm;
 }
 
+/*---- H E A D E R -----*/
 .header {
   display: grid;
   grid-template: 1.5cm 2cm / 11.2cm 8.1cm;
@@ -84,7 +86,55 @@ textarea {
   grid-template-columns: 3cm 1fr;
 }
 
-/* MEDIA QUERIES - Screen < 816px and print */
+/*---- M A I N -----*/
+.main {
+  margin-top: 0.1cm;
+  border: var(--borderSingle1);
+  border-bottom: var(--borderBottom1);
+  border-right: var(--borderBottom1);
+  display: grid;
+  grid-template: 16.9cm 2.3cm / 1fr;
+  grid-gap: 0.2cm;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-attributes {
+  text-align: center;
+  height: 0.5cm;
+  display: grid;
+  grid-template-columns: 1.4cm minmax(6cm, 12.9cm) 2.4cm 2.8cm;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1.4cm 12.9cm 2.4cm 2.8cm 0.8cm;
+  font-size: var(--fontSizeProduct);
+  text-align: right;
+  margin-top: 1em;
+}
+
+.product p {
+  padding: 0px 4px;
+  border: var(--borderInput);
+}
+
+.product__amount,
+.product__vr-unit,
+.product__vr-total {
+  font-size: 0.875em;
+}
+
+.product__vr-unit,
+.product__vr-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*--- MEDIA QUERIES - Screen < 816px and print ---*/
 @media only screen and (max-width: 815.9px) {
   #app {
     width: 94%;
@@ -97,12 +147,17 @@ textarea {
     grid-template: repeat(4, 1fr) / 1fr;
     grid-gap: 0.2cm 0.2cm;
   }
+
+  .products article {
+    grid-template-columns: 1.4cm minmax(6cm, 12.9cm) 2.4cm 2.8cm 0.8cm;
+  }
 }
 
 @media print {
   :root {
     --borderSingle1: 1px solid #fff;
     --borderBottom1: 0.1cm solid #fff;
+    --borderInput: 1px solid #fff;
   }
 
   input,
