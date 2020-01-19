@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,23 +13,67 @@
       <header class="header">
         <div class="header-item">
           <h2 class="noPrint">
-            EMANUEL IMPRESORES
+            L O G O
           </h2>
         </div>
 
         <div class="header-item">
-          <h3 class="noPrint">
+          <h3 class="header-item__bill-title noPrint">
             FACTURA DE VENTA No.
           </h3>
+          <input
+            class="header-item__bill-numb"
+            type="number"
+            min="0001"
+            max="9999"
+            size="4"
+            maxlength="4"
+            required="true"
+          />
         </div>
 
         <div class="header-item">
-          <h5 class="noPrint">
+          <h5 class="header-item__sr-title noPrint">
             Señores:
           </h5>
+          <textarea
+            class="header-item__sr-text"
+            rows="3"
+            wrap="hard"
+            spellcheck="true"
+          >
+          </textarea>
         </div>
 
-        <div class="header-item"></div>
+        <div class="header-item">
+          <div class="header-item__date">
+            <h6 class="header-item__date--title noPrint">
+              FECHA
+            </h6>
+            <input class="header-item__date--text" type="date" />
+          </div>
+
+          <div class="header-item__final-date">
+            <h6 class="header-item__final-date--title noPrint">
+              FECHA DE VENCIMIENTO
+            </h6>
+            <input class="header-item__final-date--text" type="date" />
+          </div>
+
+          <div class="header-item__purchase-numb">
+            <h6 class="header-item__purchase-numb--title noPrint">
+              ORDEN DE COMPRA No.
+            </h6>
+            <input class="header-item__purchase-numb--text" type="text" />
+          </div>
+
+          <div class="header-item__payment-type">
+            <h6 class="header-item__payment-type--title  noPrint">
+              FORMA DE PAGO
+            </h6>
+            <input class="header-item__payment-type--text" type="text" />
+          </div>
+        </div>
       </header>
 
       <main class="main">
