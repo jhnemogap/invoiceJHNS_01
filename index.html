@@ -105,10 +105,26 @@
             <h5 class="noPrint">SUB TOTAL</h5>
             <p id="price-subTotal" class="price-subTotal">
               <span>$</span>
+              <input
+                type="currency"
+                value=''
+                min=0.0
+                step="1.0"
+                class="price-subTotal-value"
+              >.0</input>
             </p>
 
             <h5 class="noPrint">TOTAL ></h5>
-            <p id="price-total" class="price-total"><span>$</span></p>
+            <p id="price-total" class="price-total">
+              <span>$</span>
+              <input
+                type="currency"
+                value=''
+                min=0.0
+                step="1.0"
+                class="price-total-value"
+              >.0</input>
+            </p>
           </div>
         </section>
       </main>
