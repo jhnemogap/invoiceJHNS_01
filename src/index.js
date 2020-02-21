@@ -1,5 +1,3 @@
-import Product from "./components/Product";
-
 let productsRender = 10;
 let $products = document.getElementById("products");
 /* let $priceSubTotal = document.getElementById("price-subTotal");
