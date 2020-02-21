@@ -42,7 +42,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -209,6 +209,12 @@ input[type='number'] {
   justify-content: space-between;
   align-items: center;
   padding: 0 6px 0;
+}
+
+.price-subTotal-value,
+.price-total-value {
+  width: 100%;
+  text-align: right;
 }
 
 /*---- F O O T E R -----*/
