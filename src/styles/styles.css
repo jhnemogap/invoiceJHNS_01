@@ -162,6 +162,12 @@ input[type="number"] {
 .product-vr-total {
   display: flex;
   justify-content: space-between;
+  font-size: var(--fontSizeBase);
+}
+
+.product-vr-unit input,
+.product-vr-total input {
+  font-size: var(--fontSizeBase);
 }
 
 .product-value {
@@ -209,12 +215,14 @@ input[type="number"] {
   justify-content: space-between;
   align-items: center;
   padding: 0 6px 0;
+  font-size: var(--fontSizeBase);
 }
 
 .price-subTotal-value,
 .price-total-value {
   width: 100%;
   text-align: right;
+  font-size: var(--fontSizeBase);
 }
 
 /*---- F O O T E R -----*/
