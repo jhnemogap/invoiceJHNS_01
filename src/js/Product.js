@@ -1,6 +1,6 @@
 const Product = (
   productAmount,
-  productDescript,
+  productDescrip,
   productVrUnit,
   productVrTotal
 ) => `
@@ -21,12 +21,12 @@ const Product = (
 
 <textarea
   placeholder="Description of product"
-  class="product-attribute product-descript"
+  class="product-attribute product-descrip"
   wrap="hard"
   cols="52"
   rows="1"
   spellcheck="true"
->${productDescript ? productDescript : ""}</textarea>
+>${productDescrip ? productDescrip : ""}</textarea>
 
 <div class="product-attribute product-vr-unit">
   <span class="currency-symbol">$</span>
@@ -52,5 +52,3 @@ const Product = (
 
 <button class="product-attribute noPrint">del</button>
 `;
-
-export default Product;

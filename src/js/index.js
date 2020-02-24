@@ -1,12 +1,10 @@
-import Product from "./components/Product";
-
 let productsRender = 10;
 let $products = document.getElementById("products");
 /* let $priceSubTotal = document.getElementById("price-subTotal");
 let $priceTotal = document.getElementById("price-total"); */
 const productsList = Array(productsRender).fill({
   productAmount: 0,
-  productDescript: "",
+  productDescrip: "",
   productVrUnit: 0.0,
   productVrTotal: 0.0
 });
@@ -14,7 +12,7 @@ const productsList = Array(productsRender).fill({
 const $$productsListHtml = productsList.map((item, index) => {
   const {
     productAmount,
-    productDescript,
+    productDescrip,
     productVrUnit,
     productVrTotal
   } = item;
@@ -25,7 +23,7 @@ const $$productsListHtml = productsList.map((item, index) => {
   newProduct.classList.add("product");
   newProduct.innerHTML = Product(
     productAmount,
-    productDescript,
+    productDescrip,
     productVrUnit,
     productVrTotal
   );
