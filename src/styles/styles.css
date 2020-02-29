@@ -250,6 +250,10 @@ input[type="number"] {
   .noPrint {
     visibility: hidden;
   }
+
+  .noPrint--displayNone {
+    display: none;
+  }
 }
 
 /* Screen < 816px */
