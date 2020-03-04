@@ -1,4 +1,4 @@
-let productsRender = 10;
+let productsRender = 16;
 let $products = document.getElementById("products");
 /* let $priceSubTotal = document.getElementById("price-subTotal");
 let $priceTotal = document.getElementById("price-total"); */
@@ -22,23 +22,28 @@ const $$productsListHtml = productsList.map((item, index) => {
   newProduct.setAttribute("id", productId);
   newProduct.classList.add("product");
   newProduct.innerHTML = Product(
+    productId,
     productAmount,
     productDescrip,
     productVrUnit,
-    productVrTotal
+    productVrTotal,
   );
-  /* newProduct.addEventListener("click", () => deleteArticle(productId)); */
 
   return newProduct;
 });
 
 $$productsListHtml.forEach(item => $products.appendChild(item));
 
-/* document.addEventListener("onclick"); */
-/* function deleteArticle(itemID) {
-  console.info(itemID);
+const $deleteButtons = Array.from(document.getElementsByClassName("delete-product"));
+
+$deleteButtons.forEach(article => {
+  const prodId = article.getAttribute("id").replace("delete-", "");
+  article.addEventListener("click", () => deleteArticle(prodId));
+})
+
+function deleteArticle(itemID) {
   $products.removeChild(document.getElementById(itemID));
-} */
+}
 
 /* const subTotal = Math.round(
   productsList
