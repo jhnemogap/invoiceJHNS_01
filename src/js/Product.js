@@ -1,4 +1,5 @@
 const Product = (
+  prodID,
   productAmount,
   productDescrip,
   productVrUnit,
@@ -50,5 +51,10 @@ const Product = (
     >.0</input>
 </div>
 
-<button class="product-attribute noPrint">del</button>
+<button
+  id="delete-${prodID}"
+  class="product-attribute noPrint delete-product"
+>
+  del
+</button>
 `;
