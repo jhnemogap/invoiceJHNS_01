@@ -4,7 +4,7 @@
   --borderInput: 1px solid #0000ff;
   --fontSizeBase: 12px;
   --fontSizeProduct: 16px;
-  --productsGridTemplate: 1fr / 1.4cm 12.9cm 2.4cm 2.8cm 0.8cm;
+  --productsGridTemplate: 1fr / 1.4cm 12.3cm 1.95cm 2.85cm 0.7cm;
 }
 
 *,
@@ -48,16 +48,16 @@ input[type="number"] {
 
 #app {
   background-color: #fff;
-  width: 8.5in;
-  height: 11in;
-  padding: 1.5cm 1cm 1.1cm;
+  width: 19.9cm;
+  height: 22.0cm;
+  padding: 1.1cm 0.7cm 1.1cm;
 }
 
 /*---- H E A D E R -----*/
 .header {
   display: grid;
-  grid-template: 1.5cm 2cm / 11.2cm 8.1cm;
-  grid-gap: 0.2cm 0.2cm;
+  grid-template: 1.5cm 1.9cm / 10.5cm 7.7cm;
+  grid-gap: 0.1cm 0.3cm;
 }
 
 .header-item {
@@ -107,12 +107,12 @@ input[type="number"] {
 
 /*---- M A I N -----*/
 .main {
-  margin-top: 0.1cm;
+  margin-top: 0.15cm;
   border: var(--borderSingle1);
   border-bottom: var(--borderBottom1);
   border-right: var(--borderBottom1);
   display: grid;
-  grid-template: 16.9cm 2.25cm / 1fr;
+  grid-template: 12.2cm 2.25cm / 1fr;
   grid-gap: 0.2cm 0cm;
 }
 
@@ -181,7 +181,7 @@ input[type="number"] {
 
 .price-container {
   display: grid;
-  grid-template: 1fr / 14.3cm 4.9cm;
+  grid-template: 1fr / 13.45cm 4.8cm;
   grid-column-gap: 0.2cm;
 }
 
@@ -190,7 +190,7 @@ input[type="number"] {
   border-right: var(--borderBottom1);
   font-size: var(--fontSizeProduct);
   display: grid;
-  grid-template: 1.25cm 1fr / 1fr 13cm;
+  grid-template: 1.10cm 1fr / 1fr 12.0cm;
 }
 
 .price-inText {
@@ -201,7 +201,7 @@ input[type="number"] {
 .price-inNumber-container {
   border: var(--borderSingle1);
   display: grid;
-  grid-template: 1fr 1fr / 0.75fr 1fr;
+  grid-template: 1fr 1fr / 2.0cm 1fr;
   justify-items: center;
   align-items: center;
   font-size: var(--fontSizeProduct);
@@ -259,7 +259,7 @@ input[type="number"] {
 /* Screen < 816px */
 @media screen and (max-width: 815.9px) {
   :root {
-    --productsGridTemplate: 1fr / 1.4cm minmax(6cm, 1fr) 2.4cm 2.8cm 0.8cm;
+    --productsGridTemplate: 1fr / 1.4cm minmax(6cm, 1fr) 1.95cm 2.85cm 0.7cm;
   }
 
   #app {

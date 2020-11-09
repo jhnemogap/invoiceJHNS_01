@@ -1,4 +1,4 @@
-let productsRender = 16;
+let productsRender = 11;
 let $products = document.getElementById("products");
 /* let $priceSubTotal = document.getElementById("price-subTotal");
 let $priceTotal = document.getElementById("price-total"); */
