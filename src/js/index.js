@@ -4,7 +4,7 @@ let $products = document.getElementById("products");
 let $priceTotal = document.getElementById("price-total"); */
 const productsList = Array(productsRender).fill({
   productAmount: 0,
-  productDescrip: "",
+  productDescription: "",
   productVrUnit: 0.0,
   productVrTotal: 0.0
 });
@@ -12,7 +12,7 @@ const productsList = Array(productsRender).fill({
 const $$productsListHtml = productsList.map((item, index) => {
   const {
     productAmount,
-    productDescrip,
+    productDescription,
     productVrUnit,
     productVrTotal
   } = item;
@@ -24,7 +24,7 @@ const $$productsListHtml = productsList.map((item, index) => {
   newProduct.innerHTML = Product(
     productId,
     productAmount,
-    productDescrip,
+    productDescription,
     productVrUnit,
     productVrTotal,
   );

@@ -9,7 +9,12 @@
   </head>
 
   <body>
-    <div id="app">
+    <aside class="section-btn-pdf noPrint">
+      <button id="preview-pdf">Visualizar PDF</button>
+      <button id="download-pdf">Descargar PDF</button>
+    </aside>
+
+    <div id="app" class="app">
       <header class="header">
         <div class="header-item">
           <h2 class="noPrint">
@@ -22,6 +27,7 @@
             FACTURA DE VENTA No.
           </h3>
           <input
+            id="input-bill-numb"
             class="header-item__bill-numb"
             type="number"
             min="1"
@@ -139,8 +145,20 @@
         </div>
       </footer>
     </div>
+    <!-- End APP -->
+
+    <iframe
+      src=""
+      frameborder="0"
+      class="app noPrint"
+      id="frame-to-preview-pdf"
+      style="background-color: transparent;"
+    >
+    </iframe>
 
     <script src="src/js/Product.js"></script>
     <script src="src/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="src/js/generatePdf.js"></script>
   </body>
 </html>

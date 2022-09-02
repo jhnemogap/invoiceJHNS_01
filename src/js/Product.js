@@ -1,7 +1,7 @@
 const Product = (
   prodID,
   productAmount,
-  productDescrip,
+  productDescription,
   productVrUnit,
   productVrTotal
 ) => `
@@ -22,12 +22,12 @@ const Product = (
 
 <textarea
   placeholder="Description of product"
-  class="product-attribute product-descrip"
+  class="product-attribute product-description"
   wrap="hard"
   cols="52"
   rows="1"
   spellcheck="true"
->${productDescrip ? productDescrip : ""}</textarea>
+>${productDescription ? productDescription : ""}</textarea>
 
 <div class="product-attribute product-vr-unit">
   <span class="currency-symbol">$</span>
