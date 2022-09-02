@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <aside class="section-btn-pdf noPrint">
+      <button id="preview-pdf">Visualizar PDF</button>
+      <button id="download-pdf">Descargar PDF</button>
+    </aside>
+
+    <div id="app" class="app">
+      <header class="header">
+        <div class="header-item">
+          <h2 class="noPrint">
+            L O G O
+          </h2>
+        </div>
+
+        <div class="header-item">
+          <h3 class="header-item__bill-title noPrint">
+            FACTURA DE VENTA No.
+          </h3>
+          <input
+            id="input-bill-numb"
+            class="header-item__bill-numb"
+            type="number"
+            min="1"
+            max="9999"
+            size="4"
+            maxlength="4"
+            required="true"
+          />
+        </div>
+
+        <div class="header-item">
+          <h5 class="header-item__sr-title noPrint">
+            Señores:
+          </h5>
+          <textarea
+            class="header-item__sr-text"
+            rows="3"
+            wrap="hard"
+            spellcheck="true"
+          >
+          </textarea>
+        </div>
+
+        <div class="header-item">
+          <div class="header-item__date">
+            <h6 class="header-item__date--title noPrint--displayNone">
+              FECHA
+            </h6>
+            <input class="header-item__date--text" type="date" />
+          </div>
+
+          <div class="header-item__final-date">
+            <h6 class="header-item__final-date--title noPrint--displayNone">
+              FECHA DE VENCIMIENTO
+            </h6>
+            <input class="header-item__final-date--text" type="date" />
+          </div>
+
+          <div class="header-item__purchase-numb">
+            <h6 class="header-item__purchase-numb--title noPrint">
+              ORDEN DE COMPRA No.
+            </h6>
+            <input class="header-item__purchase-numb--text" type="text" />
+          </div>
+
+          <div class="header-item__payment-type">
+            <h6 class="header-item__payment-type--title  noPrint">
+              FORMA DE PAGO
+            </h6>
+            <input class="header-item__payment-type--text" type="text" />
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="products-container">
+          <div class="products-attributes noPrint">
+            <h5>CANTIDAD</h5>
+            <h5>DESCRIPCIÓN</h5>
+            <h5>VR. UNIT.</h5>
+            <h5>VR. TOTAL</h5>
+            <h5>Del</h5>
+          </div>
+
+          <div id="products" class="products">
+            <!-- Here, Add product by JS -->
+          </div>
+        </section>
+
+        <section class="price-container">
+          <div class="price-inText-container">
+            <h5 class="noPrint">SON:</h5>
+            <textarea
+              class="price-inText"
+              rows="2"
+              spellcheck="true"
+            ></textarea>
+          </div>
+
+          <div class="price-inNumber-container">
+            <h5 class="noPrint">SUB TOTAL</h5>
+            <p id="price-subTotal" class="price-subTotal">
+              <span>$</span>
+              <input
+                type="currency"
+                value=''
+                min=0.0
+                step="1.0"
+                class="price-subTotal-value"
+              >.0</input>
+            </p>
+
+            <h5 class="noPrint">TOTAL ></h5>
+            <p id="price-total" class="price-total">
+              <span>$</span>
+              <input
+                type="currency"
+                value=''
+                min=0.0
+                step="1.0"
+                class="price-total-value"
+              >.0</input>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer noPrint">
+        <div class="accept-container">
+          Firma de aceptación
+        </div>
+
+        <div class="att-container">
+          Atentamente
+        </div>
+      </footer>
+    </div>
+    <!-- End APP -->
+
+    <iframe
+      src=""
+      frameborder="0"
+      class="app noPrint"
+      id="frame-to-preview-pdf"
+      style="background-color: transparent;"
+    >
+    </iframe>
+
+    <script src="src/js/Product.js"></script>
+    <script src="src/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="src/js/generatePdf.js"></script>
+  </body>
+</html>
